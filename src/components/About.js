@@ -1,6 +1,5 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import ProfileClass from "./ProfileClass";
 /*
 const About2 = () => {
     return (
@@ -38,8 +37,6 @@ class About  extends React.Component{
                     {" "}
                     This is namaster react chapter 07 finding the path 🚀
                 </p>
-                <ProfileClass name={"First child"} xyz="World of XYZ" />
-                {/* <ProfileClass name={"second Child"} xyz="World of XYZ" /> */}
                 <Outlet />
             </div>
         )
