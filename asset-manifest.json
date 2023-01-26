@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Food_Villa/static/css/main.738b1463.css",
-    "main.js": "/Food_Villa/static/js/main.e2a18f4d.js",
-    "index.html": "/Food_Villa/index.html",
-    "main.738b1463.css.map": "/Food_Villa/static/css/main.738b1463.css.map",
-    "main.e2a18f4d.js.map": "/Food_Villa/static/js/main.e2a18f4d.js.map"
+    "main.css": "/static/css/main.738b1463.css",
+    "main.js": "/static/js/main.27482f62.js",
+    "index.html": "/index.html",
+    "main.738b1463.css.map": "/static/css/main.738b1463.css.map",
+    "main.27482f62.js.map": "/static/js/main.27482f62.js.map"
   },
   "entrypoints": [
     "static/css/main.738b1463.css",
-    "static/js/main.e2a18f4d.js"
+    "static/js/main.27482f62.js"
   ]
 }
