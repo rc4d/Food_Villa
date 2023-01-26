@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.738b1463.css",
-    "main.js": "/static/js/main.27482f62.js",
-    "index.html": "/index.html",
-    "main.738b1463.css.map": "/static/css/main.738b1463.css.map",
-    "main.27482f62.js.map": "/static/js/main.27482f62.js.map"
+    "main.css": "/foodvila/static/css/main.738b1463.css",
+    "main.js": "/foodvila/static/js/main.27482f62.js",
+    "index.html": "/foodvila/index.html",
+    "main.738b1463.css.map": "/foodvila/static/css/main.738b1463.css.map",
+    "main.27482f62.js.map": "/foodvila/static/js/main.27482f62.js.map"
   },
   "entrypoints": [
     "static/css/main.738b1463.css",
