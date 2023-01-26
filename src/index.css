@@ -8,6 +8,7 @@
 .nav_items > ul{
     list-style-type: none;
     display: flex;
+    justify-content: space-between;
 }
 
 .nav_items > ul > li {
@@ -24,6 +25,14 @@
     padding: 10px;
     margin: 10px;
 }
+/* Shimmer effect of card  */
+.shimmer-card {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to right, #f2f2f2 0%, #e6e6e6 20%, #f2f2f2 40%, #f2f2f2 100%);
+  margin: 20px;
+}
+
 .cuisines{
     overflow-wrap: break-word;
 }
@@ -117,4 +126,8 @@
     width: auto;
     will-change: transform,opacity;
     z-index: 0;
+  }
+
+.resInfo{
+    display: flex;
   }
