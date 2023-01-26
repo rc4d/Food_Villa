@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import ProfileClass from "./ProfileClass";
+/*
 const About2 = () => {
     return (
         <div>
@@ -14,7 +15,7 @@ const About2 = () => {
         </div>
     )
 }
-
+*/
 class About  extends React.Component{
 
     constructor(props){
@@ -39,7 +40,7 @@ class About  extends React.Component{
                 </p>
                 <ProfileClass name={"First child"} xyz="World of XYZ" />
                 {/* <ProfileClass name={"second Child"} xyz="World of XYZ" /> */}
-                {/* <Outlet /> */}
+                <Outlet />
             </div>
         )
     }

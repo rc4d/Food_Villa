@@ -1,5 +1,4 @@
 {
-  "homepage": "https://rc4d.github.io/foodvila/",
   "name": "foodvilla",
   "version": "0.1.0",
   "private": true,
@@ -18,8 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "netlify": "netlify"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "netlify-cli": "^12.10.0"
   }
 }
+
