@@ -1,6 +1,7 @@
 {
   "name": "foodvilla",
   "version": "0.1.0",
+  "homepage": "https://rc4d.github.io/Food_Villa/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
