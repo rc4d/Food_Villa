@@ -17,7 +17,28 @@ const Body = () => {
     }, []);
 
     const getRestaurantList = async () => {
-        const response = await fetch(RESTAURANT_LIST_API)
+        const response = await fetch(RESTAURANT_LIST_API, {
+            "headers": {
+              "__fetch_req__": "true",
+              "accept": "*/*",
+              "accept-language": "en-GB,en-US;q=0.9,en;q=0.8,hi;q=0.7",
+              "cache-control": "no-cache",
+              "content-type": "application/json",
+              "pragma": "no-cache",
+              "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-platform": "\"Windows\"",
+              "sec-fetch-dest": "empty",
+              "sec-fetch-mode": "cors",
+              "sec-fetch-site": "same-origin"
+            },
+            "referrer": "https://www.swiggy.com/",
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": null,
+            "method": "GET",
+            "mode": "cors",
+            "credentials": "include"
+          })
                                 .then((data) => data.json());
             setAllRestaurant(response?.data?.cards[2]?.data?.data?.cards);
             setRestaurant(response?.data?.cards[2]?.data?.data?.cards);
