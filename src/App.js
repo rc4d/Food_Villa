@@ -3,13 +3,15 @@ import Body from "./components/Body";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Contact from './components/Contact';
-import About from './components/About';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 import Profile from './components/Profile';
-
+import { Suspense, lazy } from 'react';
 import { createBrowserRouter, Outlet } from 'react-router-dom';
+import Shimmer from './Shimmer';
 
+const Instamart = lazy(() => import("./components/Instamart")); 
+const About = lazy(() => import("./components/About"));
 
 const App = () => {
     return (
@@ -32,7 +34,7 @@ export const appRouter = createBrowserRouter([
             },
             {
                 path:"/about",
-                element: <About />,
+                element: <Suspense fallback={<h1>Loading...</h1>}><About /></Suspense>,
                 children:[{
                     path:"profile",
                     element: <Profile />
@@ -45,6 +47,10 @@ export const appRouter = createBrowserRouter([
             {
                 path:"/restaurant/:resId",
                 element: <RestaurantMenu />
+            },
+            {
+                path:"/instamart",
+                element: <Suspense fallback={<Shimmer />}><Instamart /></Suspense>
             },
         ],
     }

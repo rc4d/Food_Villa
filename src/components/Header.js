@@ -13,7 +13,9 @@ const Header = () => {
                     <Link to="/"><li>Home</li></Link>
                     <Link to="/about"><li>About</li></Link>
                     <Link to="/contact"><li>Contact</li></Link>
+
                     <li>Cart</li>
+                    <Link to="/instamart"><li>Instamart</li></Link>
                 </ul>
             </div>
             <h1>{isOnline ? "✅":"🔴" }</h1>
