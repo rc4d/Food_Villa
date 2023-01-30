@@ -41,7 +41,6 @@ const Body = () => {
             <div className="InputContainer"><input type="text" className="search-input" placeholder="It just can't be pizza..." value={searchText} onChange={(e) => setSearchText(e.target.value)} /></div>
             <button className="search-btn" 
                 onClick={
-                    // console.log(filterData(searchText,restaurantData)),
                     () => setRestaurant(filterData(searchText,allRestaurant))}
             >Search</button>
         </div>

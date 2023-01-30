@@ -10,6 +10,7 @@ import Profile from './components/Profile';
 
 import { createBrowserRouter, Outlet } from 'react-router-dom';
 
+
 const App = () => {
     return (
         <>

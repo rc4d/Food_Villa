@@ -1,6 +1,6 @@
 # Getting Started with Food Villa App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project is Live on [Netlify](https://infoodvilla.netlify.app/).
 
 ## Available Scripts
 
