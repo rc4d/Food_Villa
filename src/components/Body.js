@@ -17,34 +17,17 @@ const Body = () => {
     }, []);
 
     const getRestaurantList = async () => {
-        const response = await fetch(RESTAURANT_LIST_API, {
-            "headers": {
-              "__fetch_req__": "true",
-              "accept": "*/*",
-              "accept-language": "en-GB,en-US;q=0.9,en;q=0.8,hi;q=0.7",
-              "cache-control": "no-cache",
-              "content-type": "application/json",
-              "pragma": "no-cache",
-              "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"",
-              "sec-ch-ua-mobile": "?0",
-              "sec-ch-ua-platform": "\"Windows\"",
-              "sec-fetch-dest": "empty",
-              "sec-fetch-mode": "cors",
-              "sec-fetch-site": "same-origin"
-            },
-            "referrer": "https://www.swiggy.com/",
-            "referrerPolicy": "strict-origin-when-cross-origin",
-            "body": null,
-            "method": "GET",
-            "mode": "cors",
-            "credentials": "include"
-          })
+        const response = await fetch(RESTAURANT_LIST_API)
                                 .then((data) => data.json());
             setAllRestaurant(response?.data?.cards[2]?.data?.data?.cards);
             setRestaurant(response?.data?.cards[2]?.data?.data?.cards);
 
     }
-
+    const handleInputKey = (e) => {
+        if(e.key === "Enter"){
+            setRestaurant(filterData(searchText,allRestaurant));
+        }
+    }
     const online = useOnline();
     if(!online){
         return <h1>🔴 Offline, please check your internet connection!! </h1>;
@@ -57,15 +40,23 @@ const Body = () => {
     }
     return (restaurant.length === 0) ? <Shimmer /> : (
         <>
-        <div className="search-container">
-            <h2>Search for your favourite Food or Restaurant</h2>
-            <div className="InputContainer"><input type="text" className="search-input" placeholder="It just can't be pizza..." value={searchText} onChange={(e) => setSearchText(e.target.value)} /></div>
-            <button className="search-btn" 
+        <h2 className="p-2 text-sm">Search for your favourite Food or Restaurant</h2>
+        <div className="search-container flex p-2 bg-pink-600 my-50 text-white">
+            <div className="InputContainer">
+                <input type="text" 
+                    className="search-input h-9 w-96 p-1 text-black focus-within:bg-red-100" 
+                    placeholder="It just can't be pizza..." 
+                    value={searchText} 
+                    onChange={(e) => setSearchText(e.target.value)}
+                    onKeyDown={handleInputKey}
+                 />
+            </div>
+            <button className="px-2 mx-2 bg-purple-900  rounded-md hover:bg-sky-700" 
                 onClick={
                     () => setRestaurant(filterData(searchText,allRestaurant))}
             >Search</button>
         </div>
-        <div className="restaurant-cards">
+        <div className="restaurant-cards flex flex-wrap">
             {
                 restaurant.map((res) => {
                     return (

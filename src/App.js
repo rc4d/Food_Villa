@@ -9,17 +9,19 @@ import Profile from './components/Profile';
 import { Suspense, lazy } from 'react';
 import { createBrowserRouter, Outlet } from 'react-router-dom';
 import Shimmer from './Shimmer';
+import store from './components/utils/store';
+import { Provider } from 'react-redux';
 
 const Instamart = lazy(() => import("./components/Instamart")); 
 const About = lazy(() => import("./components/About"));
 
 const App = () => {
     return (
-        <>
+        <Provider store={store}>
         <Header />
         <Outlet />
         <Footer />
-        </>
+        </Provider>
     )
 };
 export const appRouter = createBrowserRouter([
