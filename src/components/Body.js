@@ -56,11 +56,11 @@ const Body = () => {
                     () => setRestaurant(filterData(searchText,allRestaurant))}
             >Search</button>
         </div>
-        <div className="restaurant-cards flex flex-wrap">
+        <div className="restaurant-cards flex flex-wrap mb-28">
             {
                 restaurant.map((res) => {
                     return (
-                        <Link  key={res.data.id} to={"/restaurant/"+res.data.id}><RestaurantCard data={res.data} /></Link>
+                        <Link className="w-56 p-2 m-2 shadow-lg bg-pink-100 rounded-md" key={res.data.id} to={"/restaurant/"+res.data.id}><RestaurantCard data={res.data} /></Link>
                     );
                 })
             }

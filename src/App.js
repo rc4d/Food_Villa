@@ -17,7 +17,9 @@ const About = lazy(() => import("./components/About"));
 
 const App = () => {
     return (
-        <Provider store={store}>
+        <Provider 
+        
+         store={store}>
         <Header />
         <Outlet />
         <Footer />

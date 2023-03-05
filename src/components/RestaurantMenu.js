@@ -13,8 +13,10 @@ const RestaurantMenu = () => {
     return (!restaurantInfo) ? <Shimmer /> : (
         <div className="resInfo">
             <div>
-                <h1>Restaurant Id : {resId}</h1>
-                <h2>{restaurantInfo.name}</h2>
+                <h2 className="mt-0 text-4xl font-medium leading-tight text-primary bg-pink-500 mb-5">
+                    {restaurantInfo.name}
+                    <span className="text-xs pl-5">Restaurant Id : {resId}</span>
+                </h2>
                 <img alt="restaurant" src={IMG_CDN_URL + restaurantInfo?.cloudinaryImageId} />
                 <h3>{restaurantInfo.area}</h3>
                 <h3>{restaurantInfo.city}</h3>
