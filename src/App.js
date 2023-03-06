@@ -18,11 +18,11 @@ const About = lazy(() => import("./components/About"));
 const App = () => {
     return (
         <Provider 
-        
-         store={store}>
-        <Header />
-        <Outlet />
-        <Footer />
+         store={store}
+         >
+            <Header />
+            <Outlet />
+            <Footer />
         </Provider>
     )
 };
